@@ -4,7 +4,12 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Workbox.xcscheme</key>
+		<key>ToolBox.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>6</integer>
+		</dict>
+		<key>Workbox.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -23,6 +28,11 @@
 			<true/>
 		</dict>
 		<key>C9B79AAA1DF7EC3000ABC9CF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C9BEE36F1E28A02500CFD3CF</key>
 		<dict>
 			<key>primary</key>
 			<true/>

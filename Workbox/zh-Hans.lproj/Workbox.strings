@@ -1,0 +1,129 @@
+
+/* Class = "UILabel"; text = "The current exchange rate conversion"; ObjectID = "0WZ-rd-GEG"; */
+"0WZ-rd-GEG.text" = "当前的汇率转换";
+
+/* Class = "UILabel"; text = "Compass"; ObjectID = "1Qn-ai-SAS"; */
+"1Qn-ai-SAS.text" = "指南针";
+
+/* Class = "UILabel"; text = "Mobile phone as a magnifying glass"; ObjectID = "2FY-56-QmG"; */
+"2FY-56-QmG.text" = "手机当做放大镜用";
+
+/* Class = "UINavigationItem"; title = "Protractor"; ObjectID = "56a-Q6-3E6"; */
+"56a-Q6-3E6.title" = "量角器";
+
+/* Class = "UINavigationItem"; title = "Gradienter"; ObjectID = "61S-zl-Sz5"; */
+"61S-zl-Sz5.title" = "水平仪";
+
+/* Class = "UINavigationItem"; title = "Currency Conversion"; ObjectID = "8fr-rz-yd3"; */
+"8fr-rz-yd3.title" = "货币兑换";
+
+/* Class = "UINavigationItem"; title = "MagnifyingGlass"; ObjectID = "8k6-ru-FkI"; */
+"8k6-ru-FkI.title" = "放大镜";
+
+/* Class = "UINavigationItem"; title = "Compass"; ObjectID = "8vT-P9-n8z"; */
+"8vT-P9-n8z.title" = "指南针";
+
+/* Class = "UIButton"; normalTitle = "exchange"; ObjectID = "ABq-n5-krU"; */
+"ABq-n5-krU.normalTitle" = "兑换";
+
+/* Class = "UILabel"; text = "Support the reference object measurement"; ObjectID = "Ano-4S-ix1"; */
+"Ano-4S-ix1.text" = "支持参照对象";
+
+/* Class = "UINavigationItem"; title = "Decibel"; ObjectID = "D9z-47-o8C"; */
+"D9z-47-o8C.title" = "分贝仪";
+
+/* Class = "UILabel"; text = "Simple calculator"; ObjectID = "DR9-ZI-koI"; */
+"DR9-ZI-koI.text" = "一个简易计算器";
+
+/* Class = "UILabel"; text = "To check their location and direction"; ObjectID = "DUS-ie-w8W"; */
+"DUS-ie-w8W.text" = "检测当前方向";
+
+/* Class = "UITextField"; placeholder = "请输入金额"; ObjectID = "Eet-u0-ajz"; */
+"Eet-u0-ajz.placeholder" = "请输入金额";
+
+/* Class = "UITextField"; text = "100"; ObjectID = "Eet-u0-ajz"; */
+"Eet-u0-ajz.text" = "100";
+
+/* Class = "UITextField"; placeholder = "currency"; ObjectID = "F60-Gf-Axs"; */
+"F60-Gf-Axs.placeholder" = "货币";
+
+/* Class = "UINavigationItem"; title = "Mirror"; ObjectID = "GUK-Lf-wSc"; */
+"GUK-Lf-wSc.title" = "镜子";
+
+/* Class = "UINavigationItem"; title = "Ruler"; ObjectID = "GjJ-LG-yHh"; */
+"GjJ-LG-yHh.title" = "直尺";
+
+/* Class = "UILabel"; text = "Mobile phone as a mirror"; ObjectID = "Gmg-eC-pGA"; */
+"Gmg-eC-pGA.text" = "这只是一个普通的镜子";
+
+/* Class = "UINavigationItem"; title = "Flashlight"; ObjectID = "K1n-L2-BcO"; */
+"K1n-L2-BcO.title" = "手电筒";
+
+/* Class = "UILabel"; text = "Magnifying Glass"; ObjectID = "Ley-Tc-cC4"; */
+"Ley-Tc-cC4.text" = "放大镜";
+
+/* Class = "UIButton"; normalTitle = "SOS"; ObjectID = "Lzg-Zp-589"; */
+"Lzg-Zp-589.normalTitle" = "SOS";
+
+/* Class = "UILabel"; text = "Currency Conversion"; ObjectID = "MLs-d3-fz0"; */
+"MLs-d3-fz0.text" = "货币兑换";
+
+/* Class = "UILabel"; text = "Protractor"; ObjectID = "NPv-xn-HWp"; */
+"NPv-xn-HWp.text" = "量角器";
+
+/* Class = "UILabel"; text = "Test the noise of the current environment"; ObjectID = "O7B-RO-9ug"; */
+"O7B-RO-9ug.text" = "检测当前环境的噪音";
+
+/* Class = "UILabel"; text = "Decibel"; ObjectID = "QaT-hx-Hbj"; */
+"QaT-hx-Hbj.text" = "分贝仪";
+
+/* Class = "UITableViewSection"; headerTitle = "Utility"; ObjectID = "RY1-gV-SyI"; */
+"RY1-gV-SyI.headerTitle" = "常用工具";
+
+/* Class = "UILabel"; text = "Measure the Angle"; ObjectID = "Yeg-DQ-eV5"; */
+"Yeg-DQ-eV5.text" = "测量倾斜角度";
+
+/* Class = "UILabel"; text = "Flashlight"; ObjectID = "aHC-sf-xCv"; */
+"aHC-sf-xCv.text" = "手电筒";
+
+/* Class = "UILabel"; text = "Data are for reference only, deal with the bank counter clinch a deal valence shall prevail"; ObjectID = "dJX-XQ-lOP"; */
+"dJX-XQ-lOP.text" = "数据仅供参考，交易时以银行柜台成交价为准";
+
+/* Class = "UILabel"; text = "1xxx = 1xxx"; ObjectID = "fkO-5h-79f"; */
+"fkO-5h-79f.text" = "1xxx = 1xxx";
+
+/* Class = "UILabel"; text = "Ruler"; ObjectID = "g5a-9h-9sB"; */
+"g5a-9h-9sB.text" = "直尺";
+
+/* Class = "UITableViewSection"; headerTitle = "Calculate"; ObjectID = "gI8-O2-A8b"; */
+"gI8-O2-A8b.headerTitle" = "计算";
+
+/* Class = "UILabel"; text = "Gradienter"; ObjectID = "gSm-HX-L6n"; */
+"gSm-HX-L6n.text" = "水平仪";
+
+/* Class = "UITableViewSection"; headerTitle = "Measurement"; ObjectID = "rJZ-eJ-y3w"; */
+"rJZ-eJ-y3w.headerTitle" = "测量";
+
+/* Class = "UILabel"; text = "Mirror"; ObjectID = "rmg-Tg-OWj"; */
+"rmg-Tg-OWj.text" = "镜子";
+
+/* Class = "UINavigationItem"; title = "Calculator"; ObjectID = "sQM-UI-bWS"; */
+"sQM-UI-bWS.title" = "计算器";
+
+/* Class = "UINavigationItem"; title = "Toolbox"; ObjectID = "tAg-8Q-21p"; */
+"tAg-8Q-21p.title" = "工具盒子";
+
+/* Class = "UILabel"; text = "You can start the SOS rescue mode"; ObjectID = "tVU-YL-tdX"; */
+"tVU-YL-tdX.text" = "可以启动 SOS 救援模式";
+
+/* Class = "UITextField"; placeholder = "currency"; ObjectID = "uCd-gn-Qvf"; */
+"uCd-gn-Qvf.placeholder" = "货币";
+
+/* Class = "UINavigationItem"; title = "More"; ObjectID = "vEA-Q9-YTR"; */
+"vEA-Q9-YTR.title" = "其他";
+
+/* Class = "UILabel"; text = "Calculator"; ObjectID = "zCW-El-cpL"; */
+"zCW-El-cpL.text" = "计算器";
+
+/* Class = "UILabel"; text = "Measurable cm and inches"; ObjectID = "zkY-zR-bDI"; */
+"zkY-zR-bDI.text" = "可以测量厘米与英寸";

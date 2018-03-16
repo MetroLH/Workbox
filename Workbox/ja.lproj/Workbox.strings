@@ -1,0 +1,129 @@
+
+/* Class = "UILabel"; text = "The current exchange rate conversion"; ObjectID = "0WZ-rd-GEG"; */
+"0WZ-rd-GEG.text" = "現在の為替レートが転換する";
+
+/* Class = "UILabel"; text = "Compass"; ObjectID = "1Qn-ai-SAS"; */
+"1Qn-ai-SAS.text" = "羅針盤";
+
+/* Class = "UILabel"; text = "Mobile phone as a magnifying glass"; ObjectID = "2FY-56-QmG"; */
+"2FY-56-QmG.text" = "これはただ1つの拡大鏡";
+
+/* Class = "UINavigationItem"; title = "Protractor"; ObjectID = "56a-Q6-3E6"; */
+"56a-Q6-3E6.title" = "分度器";
+
+/* Class = "UINavigationItem"; title = "Gradienter"; ObjectID = "61S-zl-Sz5"; */
+"61S-zl-Sz5.title" = "レベル計";
+
+/* Class = "UINavigationItem"; title = "Currency Conversion"; ObjectID = "8fr-rz-yd3"; */
+"8fr-rz-yd3.title" = "マネー兌換";
+
+/* Class = "UINavigationItem"; title = "MagnifyingGlass"; ObjectID = "8k6-ru-FkI"; */
+"8k6-ru-FkI.title" = "拡大鏡";
+
+/* Class = "UINavigationItem"; title = "Compass"; ObjectID = "8vT-P9-n8z"; */
+"8vT-P9-n8z.title" = "羅針盤";
+
+/* Class = "UIButton"; normalTitle = "exchange"; ObjectID = "ABq-n5-krU"; */
+"ABq-n5-krU.normalTitle" = "兌換";
+
+/* Class = "UILabel"; text = "Support the reference object measurement"; ObjectID = "Ano-4S-ix1"; */
+"Ano-4S-ix1.text" = "支持参照対象";
+
+/* Class = "UINavigationItem"; title = "Decibel"; ObjectID = "D9z-47-o8C"; */
+"D9z-47-o8C.title" = "デシベル";
+
+/* Class = "UILabel"; text = "Simple calculator"; ObjectID = "DR9-ZI-koI"; */
+"DR9-ZI-koI.text" = "単純計算機";
+
+/* Class = "UILabel"; text = "To check their location and direction"; ObjectID = "DUS-ie-w8W"; */
+"DUS-ie-w8W.text" = "現在の方向を検出";
+
+/* Class = "UITextField"; placeholder = "请输入金额"; ObjectID = "Eet-u0-ajz"; */
+"Eet-u0-ajz.placeholder" = "入力金額を入力してください";
+
+/* Class = "UITextField"; text = "100"; ObjectID = "Eet-u0-ajz"; */
+"Eet-u0-ajz.text" = "100";
+
+/* Class = "UITextField"; placeholder = "currency"; ObjectID = "F60-Gf-Axs"; */
+"F60-Gf-Axs.placeholder" = "通貨";
+
+/* Class = "UINavigationItem"; title = "Mirror"; ObjectID = "GUK-Lf-wSc"; */
+"GUK-Lf-wSc.title" = "鏡";
+
+/* Class = "UINavigationItem"; title = "Ruler"; ObjectID = "GjJ-LG-yHh"; */
+"GjJ-LG-yHh.title" = "尺";
+
+/* Class = "UILabel"; text = "Mobile phone as a mirror"; ObjectID = "Gmg-eC-pGA"; */
+"Gmg-eC-pGA.text" = "普通の鏡で";
+
+/* Class = "UINavigationItem"; title = "Flashlight"; ObjectID = "K1n-L2-BcO"; */
+"K1n-L2-BcO.title" = "懐中ペンライト";
+
+/* Class = "UILabel"; text = "Magnifying Glass"; ObjectID = "Ley-Tc-cC4"; */
+"Ley-Tc-cC4.text" = "拡大鏡";
+
+/* Class = "UIButton"; normalTitle = "SOS"; ObjectID = "Lzg-Zp-589"; */
+"Lzg-Zp-589.normalTitle" = "SOS";
+
+/* Class = "UILabel"; text = "Currency Conversion"; ObjectID = "MLs-d3-fz0"; */
+"MLs-d3-fz0.text" = "マネー兌換";
+
+/* Class = "UILabel"; text = "Protractor"; ObjectID = "NPv-xn-HWp"; */
+"NPv-xn-HWp.text" = "分度器";
+
+/* Class = "UILabel"; text = "Test the noise of the current environment"; ObjectID = "O7B-RO-9ug"; */
+"O7B-RO-9ug.text" = "現在の環境の騒音を検出する";
+
+/* Class = "UILabel"; text = "Decibel"; ObjectID = "QaT-hx-Hbj"; */
+"QaT-hx-Hbj.text" = "デシベル";
+
+/* Class = "UITableViewSection"; headerTitle = "Utility"; ObjectID = "RY1-gV-SyI"; */
+"RY1-gV-SyI.headerTitle" = "常用道具";
+
+/* Class = "UILabel"; text = "Measure the Angle"; ObjectID = "Yeg-DQ-eV5"; */
+"Yeg-DQ-eV5.text" = "測量傾斜角度";
+
+/* Class = "UILabel"; text = "Flashlight"; ObjectID = "aHC-sf-xCv"; */
+"aHC-sf-xCv.text" = "懐中ペンライト";
+
+/* Class = "UILabel"; text = "Data are for reference only, deal with the bank counter clinch a deal valence shall prevail"; ObjectID = "dJX-XQ-lOP"; */
+"dJX-XQ-lOP.text" = "データ仅供参考、取り引きの際、銀行の窓口呼び値が基準だ";
+
+/* Class = "UILabel"; text = "1xxx = 1xxx"; ObjectID = "fkO-5h-79f"; */
+"fkO-5h-79f.text" = "1xxx = 1xxx";
+
+/* Class = "UILabel"; text = "Ruler"; ObjectID = "g5a-9h-9sB"; */
+"g5a-9h-9sB.text" = "尺";
+
+/* Class = "UITableViewSection"; headerTitle = "Calculate"; ObjectID = "gI8-O2-A8b"; */
+"gI8-O2-A8b.headerTitle" = "計算";
+
+/* Class = "UILabel"; text = "Gradienter"; ObjectID = "gSm-HX-L6n"; */
+"gSm-HX-L6n.text" = "レベル計";
+
+/* Class = "UITableViewSection"; headerTitle = "Measurement"; ObjectID = "rJZ-eJ-y3w"; */
+"rJZ-eJ-y3w.headerTitle" = "測定";
+
+/* Class = "UILabel"; text = "Mirror"; ObjectID = "rmg-Tg-OWj"; */
+"rmg-Tg-OWj.text" = "鏡";
+
+/* Class = "UINavigationItem"; title = "Calculator"; ObjectID = "sQM-UI-bWS"; */
+"sQM-UI-bWS.title" = "計算機";
+
+/* Class = "UINavigationItem"; title = "Tools"; ObjectID = "tAg-8Q-21p"; */
+"tAg-8Q-21p.title" = "工具盒子";
+
+/* Class = "UILabel"; text = "You can start the SOS rescue mode"; ObjectID = "tVU-YL-tdX"; */
+"tVU-YL-tdX.text" = "SOSの救援モードを起動することができる";
+
+/* Class = "UITextField"; placeholder = "currency"; ObjectID = "uCd-gn-Qvf"; */
+"uCd-gn-Qvf.placeholder" = "通貨";
+
+/* Class = "UINavigationItem"; title = "More"; ObjectID = "vEA-Q9-YTR"; */
+"vEA-Q9-YTR.title" = "其它";
+
+/* Class = "UILabel"; text = "Calculator"; ObjectID = "zCW-El-cpL"; */
+"zCW-El-cpL.text" = "計算機";
+
+/* Class = "UILabel"; text = "Measurable cm and inches"; ObjectID = "zkY-zR-bDI"; */
+"zkY-zR-bDI.text" = "センチメートルとインチ";

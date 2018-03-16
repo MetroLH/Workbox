@@ -1,0 +1,28 @@
+/* 
+  Localizable.strings
+  Workbox
+
+  Created by 刘海 on 2017/1/12.
+  Copyright © 2017年 刘海. All rights reserved.
+*/
+
+
+huobiliebiaoerror = "取得できない貨幣リスト、インターネット接続をチェックしてください!";
+qingshurujine = "金額で入力してください";
+huilverror = "当面の為替相場を与えられない";
+jinrongcankao = "データ仅供参考、取り引きの際、銀行の窓口呼び値が基準だ。时间:";
+flasherror = "当面の設備を提供できないが、フラッシュが懐中電灯機能";
+
+dong = "東";
+xi = "西";
+nan = "南";
+bei = "北";
+dongbei = "東北";
+dongnan = "東南";
+xibei = "北西";
+xinan = "南西";
+
+OK = "確定";
+cancel = "取り消し";
+
+cameraerror = "カメラの稼動をチェックしてください、カメラの権限だ。";

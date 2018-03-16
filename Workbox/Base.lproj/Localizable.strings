@@ -1,0 +1,27 @@
+/* 
+  Localizable.strings
+  Workbox
+
+  Created by 刘海 on 2017/1/12.
+  Copyright © 2017年 刘海. All rights reserved.
+*/
+
+huobiliebiaoerror = "Unable to get money list, please check the network connection!";
+qingshurujine = "Please enter the amount";
+huilverror = "Unable to get the current exchange rate";
+jinrongcankao = "Data are for reference only, deal with the bank counter clinch a deal valence shall prevail. Update time:";
+flasherror = "Current device without flash, cannot provide the flashlight function";
+
+dong = "E";
+xi = "W";
+nan = "S";
+bei = "N";
+dongbei = "Northeast";
+dongnan = "Southeast";
+xibei = "Northwest";
+xinan = "Southwest";
+
+OK = "OK";
+cancel = "Cancel";
+
+cameraerror = "Unable to start the camera, please check the camera.";
