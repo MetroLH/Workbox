@@ -115,7 +115,7 @@
 		C9384BFA1E1656B3008917AB /* ProtractorBackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProtractorBackgroundView.swift; sourceTree = "<group>"; };
 		C9384C001E176983008917AB /* ProtractorVernierView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProtractorVernierView.swift; sourceTree = "<group>"; };
 		C9384C021E178FC5008917AB /* ProtractorNoniusView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProtractorNoniusView.swift; sourceTree = "<group>"; };
-		C94ED7E41DFE7271008B8B09 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
+		C94ED7E41DFE7271008B8B09 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		C94ED7E61DFE75CB008B8B09 /* LTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LTools.swift; sourceTree = "<group>"; };
 		C94ED7E91DFE7CD1008B8B09 /* ToolsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolsViewController.swift; sourceTree = "<group>"; };
 		C94ED7EB1DFE7CE3008B8B09 /* MarksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarksViewController.swift; sourceTree = "<group>"; };
