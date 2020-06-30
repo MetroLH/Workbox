@@ -100,9 +100,9 @@ class MoneyExchangeViewController: MainViewController,UIPickerViewDelegate,UIPic
         
         let message:String = "\n\n\n\n\n\n\n\n\n";
 
-        let sheet = UIAlertController(title: nil, message: message, preferredStyle: UIAlertControllerStyle.actionSheet);
+        let sheet = UIAlertController(title: nil, message: message, preferredStyle: UIAlertController.Style.actionSheet);
         
-        sheet.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "OK"), style: UIAlertActionStyle.default, handler: { (action) in
+        sheet.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "OK"), style: UIAlertAction.Style.default, handler: { (action) in
             
             //确定
             switch index {
@@ -123,7 +123,7 @@ class MoneyExchangeViewController: MainViewController,UIPickerViewDelegate,UIPic
             
  
         }));
-        sheet.addAction(UIAlertAction(title: NSLocalizedString("cancel", comment: "cancel"), style: UIAlertActionStyle.cancel, handler: { (action) in
+        sheet.addAction(UIAlertAction(title: NSLocalizedString("cancel", comment: "cancel"), style: UIAlertAction.Style.cancel, handler: { (action) in
             //取消
         }));
         
@@ -278,7 +278,7 @@ class MoneyExchangeViewController: MainViewController,UIPickerViewDelegate,UIPic
         }
     }
 
-    func hidekeyboard(){
+    @objc func hidekeyboard(){
         if moneyTF.canResignFirstResponder {
             moneyTF.resignFirstResponder();
         }

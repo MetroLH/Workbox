@@ -93,7 +93,7 @@ class DecibelBackgroundView: MainUIView {
                     
                     let indexLabel:UILabel = UILabel(frame: rect);
                     indexLabel.backgroundColor = UIColor.clear;
-                    indexLabel.text = String(stringInterpolationSegment: 150 - angle);
+                    indexLabel.text = String(150 - angle);
                     indexLabel.textAlignment = .center;
                     indexLabel.font = UIFont.systemFont(ofSize: 12);
                     

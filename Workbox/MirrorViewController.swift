@@ -43,8 +43,8 @@ class MirrorViewController: MainViewController {
         self.view.insertSubview(showView, belowSubview: self.view.subviews[0]);
         
         let backButton = UIButton(frame: CGRect(x: 5, y: 25, width: 40, height: 40));
-        backButton.setImage(UIImage(named:"ud_back"), for: UIControlState.normal);
-        backButton.addTarget(self, action: #selector(back), for: UIControlEvents.touchUpInside);
+        backButton.setImage(UIImage(named:"ud_back"), for: UIControl.State.normal);
+        backButton.addTarget(self, action: #selector(back), for: UIControl.Event.touchUpInside);
         self.view.addSubview(backButton);
     }
 
@@ -61,7 +61,7 @@ class MirrorViewController: MainViewController {
             viewLayer.masksToBounds = true;
             
             previewLayer.frame = cameraShowView.bounds;
-            previewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
+            previewLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill;
             
             viewLayer.addSublayer(previewLayer);
             
@@ -110,7 +110,7 @@ class MirrorViewController: MainViewController {
         if session == nil {
             session = AVCaptureSession();
             
-            device = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo);
+            device = AVCaptureDevice.default(for: AVMediaType.video);
 //            if device.isExposureModeSupported(AVCaptureExposureMode.custom){
 //                
 //                do {
@@ -130,11 +130,11 @@ class MirrorViewController: MainViewController {
             
             
             do {
-                let videoInput = try AVCaptureDeviceInput(device: frontCamera());
+                let videoInput = try AVCaptureDeviceInput(device: frontCamera()!);
                 if session.canAddInput(videoInput) {
                     session.addInput(videoInput);
                 }
-                session.sessionPreset = AVCaptureSessionPresetPhoto;
+                session.sessionPreset = AVCaptureSession.Preset.photo;
                 session.startRunning();
             } catch let error as NSError {
                 print("camera error : ",error)
@@ -169,7 +169,7 @@ class MirrorViewController: MainViewController {
         btn.isSelected = !btn.isSelected;
         if btn.isSelected{
             //打开补光
-            UIView.animate(withDuration: 0.3, delay: 0, options: UIViewAnimationOptions.curveEaseInOut, animations: { 
+            UIView.animate(withDuration: 0.3, delay: 0, options: UIView.AnimationOptions.curveEaseInOut, animations: {
 
                 
                 self.showView.frame = CGRect(x: 0, y: 0, width: screenObject.width , height: screenObject.height);
@@ -188,7 +188,7 @@ class MirrorViewController: MainViewController {
             });
         }else{
             //关闭补光
-            UIView.animate(withDuration: 0.3, delay: 0, options: UIViewAnimationOptions.curveEaseInOut, animations: {
+            UIView.animate(withDuration: 0.3, delay: 0, options: UIView.AnimationOptions.curveEaseInOut, animations: {
                 
                 self.showView.frame = CGRect(x: -20, y: -20, width: screenObject.width + 40, height: screenObject.height + 40);
                 self.showView.layer.borderColor = UIColor.clear.cgColor;
@@ -207,11 +207,11 @@ class MirrorViewController: MainViewController {
         super.viewWillAppear(animated);
         self.navigationController?.setNavigationBarHidden(true, animated: true);
         
-        let authorizationStatus = AVCaptureDevice.authorizationStatus(forMediaType: AVMediaTypeVideo)
+        let authorizationStatus = AVCaptureDevice.authorizationStatus(for: AVMediaType.video)
         switch authorizationStatus {
         case .notDetermined:
             // 许可对话没有出现，发起授权许可
-            AVCaptureDevice.requestAccess(forMediaType: AVMediaTypeVideo,
+            AVCaptureDevice.requestAccess(for: AVMediaType.video,
                                           completionHandler: { (granted:Bool) -> Void in
                                             if granted {
                                                 // 继续
@@ -241,7 +241,7 @@ class MirrorViewController: MainViewController {
         
     }
     
-    func back() {
+    @objc func back() {
         self.navigationController!.popViewController(animated: true);
     }
     

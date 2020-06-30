@@ -27,8 +27,8 @@ class MGViewController: MainViewController {
         // Do any additional setup after loading the view.
         
         let backButton = UIButton(frame: CGRect(x: 5, y: 25, width: 40, height: 40));
-        backButton.setImage(UIImage(named:"ud_back"), for: UIControlState.normal);
-        backButton.addTarget(self, action: #selector(back), for: UIControlEvents.touchUpInside);
+        backButton.setImage(UIImage(named:"ud_back"), for: UIControl.State.normal);
+        backButton.addTarget(self, action: #selector(back), for: UIControl.Event.touchUpInside);
         self.view.addSubview(backButton);
     }
     
@@ -44,7 +44,7 @@ class MGViewController: MainViewController {
             viewLayer.masksToBounds = true;
             
             previewLayer.frame = cameraShowView.bounds;
-            previewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
+            previewLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill;
             
             viewLayer.addSublayer(previewLayer);
             
@@ -72,10 +72,10 @@ class MGViewController: MainViewController {
         if session == nil {
             session = AVCaptureSession();
             
-            device = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo);
-            
+            device = AVCaptureDevice.default(for: AVMediaType.video);
+                        
             do {
-                let videoInput = try AVCaptureDeviceInput(device: backCamera());
+                let videoInput = try AVCaptureDeviceInput(device: backCamera()!);
                 if session.canAddInput(videoInput) {
                     session.addInput(videoInput);
                 }
@@ -83,14 +83,14 @@ class MGViewController: MainViewController {
                 if session.canAddOutput(stillImageOutput){
                     session.addOutput(stillImageOutput);
                 }
-                session.sessionPreset = AVCaptureSessionPresetPhoto;
+                session.sessionPreset = AVCaptureSession.Preset.photo;
                 session.startRunning();
             } catch let error as NSError {
                 print("camera error : ",error)
             }
             
             output = self.session.outputs[0] as! AVCaptureStillImageOutput;
-            videoConnection = output.connection(withMediaType: AVMediaTypeVideo);
+            videoConnection = output.connection(with: AVMediaType.video);
             maxScale = videoConnection!.videoMaxScaleAndCropFactor;
             
             slider.minimumValue = 1.0;
@@ -101,7 +101,7 @@ class MGViewController: MainViewController {
     
     @IBAction func sliderValueChanged(slider : UISlider){
         
-        UIView.animate(withDuration: 0.2, delay: 0, options: UIViewAnimationOptions.curveEaseInOut, animations: {
+        UIView.animate(withDuration: 0.2, delay: 0, options: UIView.AnimationOptions.curveEaseInOut, animations: {
             print("value : ",slider.value);
             self.cameraShowView.transform = CGAffineTransform(scaleX: CGFloat(slider.value), y: CGFloat(slider.value));
             var videoScaleAndCropFactor = self.videoConnection!.videoScaleAndCropFactor;
@@ -122,12 +122,12 @@ class MGViewController: MainViewController {
             self.showAlert(title: "", message: NSLocalizedString("flasherror", comment: ""));
             return;
         }
-        if device.torchMode == AVCaptureTorchMode.on {
+        if device.torchMode == AVCaptureDevice.TorchMode.on {
             //关闭手电筒
             btn.isSelected = false;
             do {
                 try device.lockForConfiguration();
-                device.torchMode = AVCaptureTorchMode.off;
+                device.torchMode = AVCaptureDevice.TorchMode.off;
                 device.unlockForConfiguration();
             } catch let error {
                 print("device error : " ,error);
@@ -138,7 +138,7 @@ class MGViewController: MainViewController {
             btn.isSelected = true;
             do {
                 try device.lockForConfiguration();
-                device.torchMode = AVCaptureTorchMode.on;
+                device.torchMode = AVCaptureDevice.TorchMode.on;
                 device.unlockForConfiguration();
             } catch let error {
                 print("device error : " ,error);
@@ -151,11 +151,11 @@ class MGViewController: MainViewController {
         super.viewWillAppear(animated);
         self.navigationController?.setNavigationBarHidden(true, animated: true);
         
-        let authorizationStatus = AVCaptureDevice.authorizationStatus(forMediaType: AVMediaTypeVideo)
+        let authorizationStatus = AVCaptureDevice.authorizationStatus(for: AVMediaType.video)
         switch authorizationStatus {
         case .notDetermined:
             // 许可对话没有出现，发起授权许可
-            AVCaptureDevice.requestAccess(forMediaType: AVMediaTypeVideo,
+            AVCaptureDevice.requestAccess(for: AVMediaType.video,
                                           completionHandler: { (granted:Bool) -> Void in
                                             if granted {
                                                 // 继续
@@ -185,7 +185,7 @@ class MGViewController: MainViewController {
         
     }
     
-    func back() {
+    @objc func back() {
         self.navigationController!.popViewController(animated: true);
     }
 

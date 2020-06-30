@@ -29,21 +29,21 @@ class ProtractorViewController: MainViewController {
         
         
         let cameraBtn = UIButton(frame: CGRect(x: screenObject.width - 50, y: screenObject.height - 50, width: 40, height: 40));
-        cameraBtn.setImage(UIImage(named: "camera_off"), for: UIControlState.normal);
-        cameraBtn.setImage(UIImage(named: "camera_on"), for: UIControlState.selected);
-        cameraBtn.addTarget(self, action: #selector(cameraBtn(btn:)), for: UIControlEvents.touchUpInside);
+        cameraBtn.setImage(UIImage(named: "camera_off"), for: UIControl.State.normal);
+        cameraBtn.setImage(UIImage(named: "camera_on"), for: UIControl.State.selected);
+        cameraBtn.addTarget(self, action: #selector(cameraBtn(btn:)), for: UIControl.Event.touchUpInside);
         self.view.addSubview(cameraBtn);
     }
 
     
-    func cameraBtn(btn : UIButton){
+    @objc func cameraBtn(btn : UIButton){
         btn.isSelected = !btn.isSelected;
         
-        let authorizationStatus = AVCaptureDevice.authorizationStatus(forMediaType: AVMediaTypeVideo)
+        let authorizationStatus = AVCaptureDevice.authorizationStatus(for: AVMediaType.video)
         switch authorizationStatus {
         case .notDetermined:
             // 许可对话没有出现，发起授权许可
-            AVCaptureDevice.requestAccess(forMediaType: AVMediaTypeVideo,
+            AVCaptureDevice.requestAccess(for: AVMediaType.video,
                                                       completionHandler: { (granted:Bool) -> Void in
                                                         if granted {
                                                             // 继续
@@ -93,7 +93,7 @@ class ProtractorViewController: MainViewController {
             viewLayer.masksToBounds = true;
             
             previewLayer.frame = cameraShowView.bounds;
-            previewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
+            previewLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill;
             
             viewLayer.addSublayer(previewLayer);
             
@@ -120,11 +120,11 @@ class ProtractorViewController: MainViewController {
             session = AVCaptureSession();
             
             do {
-                let videoInput = try AVCaptureDeviceInput(device: backCamera());
+                let videoInput = try AVCaptureDeviceInput(device: backCamera()!);
                 if session.canAddInput(videoInput) {
                     session.addInput(videoInput);
                 }
-                session.sessionPreset = AVCaptureSessionPresetPhoto
+                session.sessionPreset = AVCaptureSession.Preset.photo
                 session.startRunning()
             } catch let error as NSError {
                 print("camera error : ",error)

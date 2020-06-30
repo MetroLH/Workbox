@@ -1,18 +1,24 @@
 PODS:
-  - Alamofire (4.2.0)
-  - MBProgressHUD (1.0.0)
-  - SwiftyJSON (3.1.3)
+  - Alamofire (4.9.1)
+  - MBProgressHUD (1.2.0)
+  - SwiftyJSON (5.0.0)
 
 DEPENDENCIES:
-  - Alamofire (~> 4.0)
-  - MBProgressHUD (~> 1.0.0)
+  - Alamofire
+  - MBProgressHUD
   - SwiftyJSON
 
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Alamofire
+    - MBProgressHUD
+    - SwiftyJSON
+
 SPEC CHECKSUMS:
-  Alamofire: aa2e09d871c9160ac53c90e83c68064a94e3dfbe
-  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
-  SwiftyJSON: 38a8ea2006779c0fc4c310cb2ee8195327740faf
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: 11647ebb9cf676af175b8351ea5ceded50067812
+PODFILE CHECKSUM: 75218ddb631725b755668307da1bd88819c5fdbd
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.8.4

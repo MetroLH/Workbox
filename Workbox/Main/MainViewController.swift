@@ -35,23 +35,23 @@ class MainViewController: UIViewController {
     }
     
     func  showAlert(title :String?,message :String?) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert);
-        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "OK"), style: UIAlertActionStyle.default, handler: nil));
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert);
+        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "OK"), style: UIAlertAction.Style.default, handler: nil));
         self.present(alert, animated: true, completion: nil);
     }
     
     //前置摄像头
     func frontCamera()->AVCaptureDevice?{
-        return cameraWithPosition(position: AVCaptureDevicePosition.front);
+        return cameraWithPosition(position: AVCaptureDevice.Position.front);
     }
     
     //后置摄像头
     func backCamera()->AVCaptureDevice?{
-        return cameraWithPosition(position: AVCaptureDevicePosition.back);
+        return cameraWithPosition(position: AVCaptureDevice.Position.back);
     }
-    func cameraWithPosition(position: AVCaptureDevicePosition) -> AVCaptureDevice?{
-        let devices = AVCaptureDevice.devices(withMediaType: AVMediaTypeVideo);
-        for device:AVCaptureDevice in devices as! Array {
+    func cameraWithPosition(position: AVCaptureDevice.Position) -> AVCaptureDevice?{
+        let devices = AVCaptureDevice.devices(for: AVMediaType.video);
+        for device:AVCaptureDevice in devices {
             if device.position == position {
                 return device;
             }

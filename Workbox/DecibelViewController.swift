@@ -60,7 +60,7 @@ class DecibelViewController: MainViewController,UITableViewDelegate,UITableViewD
         dbLabel.textColor = UIColor.white;
         self.view.addSubview(dbLabel);
         
-        let tableView = UITableView(frame: CGRect(x:0,y:65.0 + decibelView.frame.height,width:screenObject.width,height:screenObject.height - decibelView.frame.height - 65.0), style: UITableViewStyle.plain);
+        let tableView = UITableView(frame: CGRect(x:0,y:65.0 + decibelView.frame.height,width:screenObject.width,height:screenObject.height - decibelView.frame.height - 65.0), style: UITableView.Style.plain);
         tableView.dataSource = self;
         tableView.delegate = self;
         tableView.backgroundColor = UIColor.white;
@@ -71,7 +71,7 @@ class DecibelViewController: MainViewController,UITableViewDelegate,UITableViewD
             if granted{
                 /* 必须添加这句话，否则在模拟器可以，在真机上获取始终是0  */
                 do {
-                    try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayAndRecord);
+                    try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playAndRecord);
                 } catch let error as NSError {
                     print("AVAudioSession error : ",error)
                 }
@@ -98,13 +98,13 @@ class DecibelViewController: MainViewController,UITableViewDelegate,UITableViewD
                     self.levelTimer = Timer(timeInterval: 0.1, target: self, selector: #selector(DecibelViewController.levelTimerCallback(timer:)), userInfo: nil, repeats: true);
                     
                     // 将定时器添加到运行循环
-                    RunLoop.current.add(self.levelTimer, forMode: RunLoopMode.commonModes);
+                    RunLoop.current.add(self.levelTimer, forMode: RunLoop.Mode.common);
                 }
             }
         }
     }
     
-    func levelTimerCallback(timer: Timer){
+    @objc func levelTimerCallback(timer: Timer){
         
         self.recorder.updateMeters();
         

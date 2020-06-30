@@ -82,7 +82,7 @@ class ProtractorBackgroundView: MainUIView {
                     
                     let indexLabel:UILabel = UILabel(frame: rect);
                     indexLabel.backgroundColor = UIColor.clear;
-                    indexLabel.text = String(stringInterpolationSegment: 180 - angle);
+                    indexLabel.text = String(180 - angle);
                     indexLabel.textAlignment = .center;
                     indexLabel.font = UIFont.systemFont(ofSize: 12);
                     indexLabel.textColor = UIColor(red: 22.0 / 255.0, green: 22.0 / 255.0, blue: 22.0 / 255.0, alpha: 1);

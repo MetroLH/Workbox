@@ -67,8 +67,8 @@ class GradienterViewController: MainViewController {
         self.view.addSubview(radiusYLabel);
         
         let backButton = UIButton(frame: CGRect(x: 5, y: 25, width: 40, height: 40));
-        backButton.setImage(UIImage(named:"ud_back"), for: UIControlState.normal);
-        backButton.addTarget(self, action: #selector(back), for: UIControlEvents.touchUpInside);
+        backButton.setImage(UIImage(named:"ud_back"), for: UIControl.State.normal);
+        backButton.addTarget(self, action: #selector(back), for: UIControl.Event.touchUpInside);
         self.view.addSubview(backButton);
         
     }
@@ -189,7 +189,7 @@ class GradienterViewController: MainViewController {
     }
 
     
-    func back() {
+    @objc func back() {
         self.navigationController!.popViewController(animated: true);
     }
     override func didReceiveMemoryWarning() {

@@ -57,8 +57,8 @@ class CompassViewController: MainViewController,CLLocationManagerDelegate {
         self.view.addSubview(angleLabel);
         
         let backButton = UIButton(frame: CGRect(x: 5, y: 25, width: 40, height: 40));
-        backButton.setImage(UIImage(named:"ud_back"), for: UIControlState.normal);
-        backButton.addTarget(self, action: #selector(back), for: UIControlEvents.touchUpInside);
+        backButton.setImage(UIImage(named:"ud_back"), for: UIControl.State.normal);
+        backButton.addTarget(self, action: #selector(back), for: UIControl.Event.touchUpInside);
         self.view.addSubview(backButton);
         
         locationManager.delegate = self;
@@ -99,7 +99,7 @@ class CompassViewController: MainViewController,CLLocationManagerDelegate {
         
         
         
-        UIView.animate(withDuration: 0.4, delay: 0, options: [UIViewAnimationOptions.beginFromCurrentState,UIViewAnimationOptions.curveEaseOut,UIViewAnimationOptions.allowUserInteraction], animations: {
+        UIView.animate(withDuration: 0.4, delay: 0, options: [UIView.AnimationOptions.beginFromCurrentState,UIView.AnimationOptions.curveEaseOut,UIView.AnimationOptions.allowUserInteraction], animations: {
             
             self.comBG.transform = CGAffineTransform(rotationAngle: CGFloat(-AngleToRadian(angle: CGFloat(theHeading))));
             
@@ -107,7 +107,7 @@ class CompassViewController: MainViewController,CLLocationManagerDelegate {
             
         }
         
-        UIView.animate(withDuration: 0.6, delay: 0, options: [UIViewAnimationOptions.beginFromCurrentState,UIViewAnimationOptions.curveEaseOut,UIViewAnimationOptions.allowUserInteraction], animations: {
+        UIView.animate(withDuration: 0.6, delay: 0, options: [UIView.AnimationOptions.beginFromCurrentState,UIView.AnimationOptions.curveEaseOut,UIView.AnimationOptions.allowUserInteraction], animations: {
             self.comBG.transform = CGAffineTransform(rotationAngle: CGFloat(AngleToRadian(angle: 0) - AngleToRadian(angle: CGFloat(theHeading))));
         }) { (finished) in
             
@@ -131,7 +131,15 @@ class CompassViewController: MainViewController,CLLocationManagerDelegate {
                 let speedX = CGFloat(cmdeviceMotion!.gravity.x);
                 let speedY =  CGFloat(cmdeviceMotion!.gravity.y);
                 
-                self.comCenterBg.center = CGPoint(x: self.centerPoint.x - speedX * ((screenObject.width - self.radius * 0.3 - self.comCenterBg.frame.width) / 2.0),y: self.centerPoint.y + speedY * ((screenObject.width - self.radius * 0.3 - self.comCenterBg.frame.height) / 2.0));
+                let width = (screenObject.width - self.radius * 0.3 - self.comCenterBg.frame.width) / 2.0;
+                let height = (screenObject.width - self.radius * 0.3 - self.comCenterBg.frame.height) / 2.0;
+                
+                
+                let x = self.centerPoint.x - speedX * width;
+                let y = self.centerPoint.y + speedY * height;
+                
+                
+                self.comCenterBg.center = CGPoint(x: x, y: y);
             })
         }
     }
@@ -156,7 +164,7 @@ class CompassViewController: MainViewController,CLLocationManagerDelegate {
         stopLocation();
     }
     
-    func back() {
+    @objc func back() {
         self.navigationController!.popViewController(animated: true);
     }
 

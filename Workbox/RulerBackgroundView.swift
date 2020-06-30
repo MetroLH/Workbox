@@ -58,7 +58,7 @@ class RulerBackgroundView: MainUIView {
                     }
                     let indexLabel:UILabel = UILabel(frame: rect);
                     indexLabel.backgroundColor = UIColor.clear;
-                    indexLabel.text = String(stringInterpolationSegment:lineIndex/10);
+                    indexLabel.text = String(lineIndex/10);
                     indexLabel.textAlignment = .center;
                     indexLabel.font = UIFont.systemFont(ofSize: 12);
                     indexLabel.textColor = UIColor(red: 22.0 / 255.0, green: 22.0 / 255.0, blue: 22.0 / 255.0, alpha: 1);
@@ -96,7 +96,7 @@ class RulerBackgroundView: MainUIView {
                     }
                     let indexLabel:UILabel = UILabel(frame: rect);
                     indexLabel.backgroundColor = UIColor.clear;
-                    indexLabel.text = String(stringInterpolationSegment:lineINCHIndex/10);
+                    indexLabel.text = String(lineINCHIndex/10);
                     indexLabel.textAlignment = .center;
                     indexLabel.font = UIFont.systemFont(ofSize: 12);
                     indexLabel.textColor = UIColor(red: 22.0 / 255.0, green: 22.0 / 255.0, blue: 22.0 / 255.0, alpha: 1);

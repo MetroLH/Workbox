@@ -76,5 +76,5 @@ debugPrint(allItems);
 (CGFloat(M_PI)/180.0)*20.0
 
 
-String(stringInterpolationSegment: 12)
+String(12)
 

@@ -30,7 +30,7 @@ class FlashlightViewController: MainViewController {
         
         sosBtn.layer.cornerRadius = sosBtn.frame.width / 2.0;
         
-        device = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo);
+        device = AVCaptureDevice.default(for: AVMediaType.video);
         if !device.hasTorch {
             self.showAlert(title: "", message: NSLocalizedString("flasherror", comment: ""));
         }
@@ -59,11 +59,11 @@ class FlashlightViewController: MainViewController {
         
         playSound();
         
-        if device.torchMode == AVCaptureTorchMode.on {
+        if device.torchMode == AVCaptureDevice.TorchMode.on {
             //关闭手电筒
             do {
                 try device.lockForConfiguration();
-                device.torchMode = AVCaptureTorchMode.off;
+                device.torchMode = AVCaptureDevice.TorchMode.off;
                 device.unlockForConfiguration();
             } catch let error {
                 print("device error : " ,error);
@@ -73,7 +73,7 @@ class FlashlightViewController: MainViewController {
             //开启手电筒
             do {
                 try device.lockForConfiguration();
-                device.torchMode = AVCaptureTorchMode.on;
+                device.torchMode = AVCaptureDevice.TorchMode.on;
                 device.unlockForConfiguration();
             } catch let error {
                 print("device error : " ,error);
@@ -84,11 +84,11 @@ class FlashlightViewController: MainViewController {
     }
     
     func flashon(){
-        if device.torchMode == AVCaptureTorchMode.on {
+        if device.torchMode == AVCaptureDevice.TorchMode.on {
             //关闭手电筒
             do {
                 try device.lockForConfiguration();
-                device.torchMode = AVCaptureTorchMode.off;
+                device.torchMode = AVCaptureDevice.TorchMode.off;
                 device.unlockForConfiguration();
             } catch let error {
                 print("device error : " ,error);
@@ -98,7 +98,7 @@ class FlashlightViewController: MainViewController {
             //开启手电筒
             do {
                 try device.lockForConfiguration();
-                device.torchMode = AVCaptureTorchMode.on;
+                device.torchMode = AVCaptureDevice.TorchMode.on;
                 device.unlockForConfiguration();
             } catch let error {
                 print("device error : " ,error);
@@ -117,12 +117,12 @@ class FlashlightViewController: MainViewController {
         if shortTimer == nil{
             shortTimer = Timer(timeInterval: 0.2, target: self, selector: #selector(shortFlash(timer:)), userInfo: nil, repeats: true);
             // 将定时器添加到运行循环
-            RunLoop.current.add(shortTimer!, forMode: RunLoopMode.commonModes);
+            RunLoop.current.add(shortTimer!, forMode: RunLoop.Mode.common);
         }
 
     }
     
-    func shortFlash(timer: Timer){
+    @objc func shortFlash(timer: Timer){
         if shortNumber < 2{
             if shortCount < 6{
                 flashon();
@@ -136,7 +136,7 @@ class FlashlightViewController: MainViewController {
                     //启动长计时器
                     longTimer = Timer(timeInterval: 0.6, target: self, selector: #selector(longFlash(timer:)), userInfo: nil, repeats: true);
                     // 将定时器添加到运行循环
-                    RunLoop.current.add(longTimer!, forMode: RunLoopMode.commonModes);
+                    RunLoop.current.add(longTimer!, forMode: RunLoop.Mode.common);
                 }
 
                 
@@ -156,7 +156,7 @@ class FlashlightViewController: MainViewController {
         }
     }
     
-    func longFlash(timer: Timer){
+    @objc func longFlash(timer: Timer){
         if longCount < 6{
             flashon();
             longCount += 1;
@@ -169,7 +169,7 @@ class FlashlightViewController: MainViewController {
             if shortTimer == nil{
                 shortTimer = Timer(timeInterval: 0.2, target: self, selector: #selector(shortFlash(timer:)), userInfo: nil, repeats: true);
                 // 将定时器添加到运行循环
-                RunLoop.current.add(shortTimer!, forMode: RunLoopMode.commonModes);
+                RunLoop.current.add(shortTimer!, forMode: RunLoop.Mode.common);
             }
             //短计时器次数+1
             shortNumber += 1;
